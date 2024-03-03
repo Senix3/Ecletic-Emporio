@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/styles_checkout.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Ecletic Emporio</a></div>
+            <ul class="nav-links">
+                <li class="nav-cont"><a href="index.html">Inicio</a></li>
+                <li class="nav-cont"><a href="#" id="loginBtn">Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Checkout</h1>
+
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="cartItems">
+            <!-- Aquí se mostrarán los productos agregados al carrito -->
+        </tbody>
+    </table>
+
+    <form id="checkoutForm">
+        <label for="paymentType">Tipo de pago:</label><br>
+        <input type="radio" id="creditCard" name="paymentType" value="creditCard">
+        <label for="creditCard">Tarjeta de crédito</label><br>
+        <input type="radio" id="debitCard" name="paymentType" value="debitCard">
+        <label for="debitCard">Tarjeta de débito</label><br><br>
+
+        <div id="creditCardInfo" style="display: none;">
+            <label for="creditCardNumber">Número de tarjeta de crédito:</label><br>
+            <input type="number" id="creditCardNumber" name="creditCardNumber"><br>
+            <label for="creditCardCvv">CVV:</label><br>
+            <input type="text" id="creditCardCvv" name="creditCardCvv"><br>
+            <label for="creditCardExpiration">Fecha de expiración:</label><br>
+            <input type="date" id="creditCardExpiration" name="creditCardExpiration"><br>
+        </div>
+
+        <div id="debitCardInfo" style="display: none;">
+            <label for="debitCardNumber">Número de tarjeta de débito:</label><br>
+            <input type="number" id="debitCardNumber" name="debitCardNumber"><br>
+            <label for="debitCardPin">PIN:</label><br>
+            <input type="password" id="debitCardPin" name="debitCardPin"><br>
+        </div>
+
+        <button type="submit">Comprar</button>
+    </form>
+    
+    <br><br><br><br><br><br>
+
+    <footer>
+        <div class="footer-info">
+            <p>Dirección: Calle 110 Avenida Las Flores</p>
+            <p>Teléfono: +57 3045734587</p>
+            <p>Email: Eclemporio@gmail.com</p>
+
+            <ul>
+                <a href=""><img src="/Image/facebook.png" alt="redesSociales" class="redesSociales"></a></li>
+                <a href=""><img src="/Image/instagram.png" alt="redesSociales" class="redesSociales"></a></li>
+                <a href=""><img src="/Image/linkedin.png" alt="redesSociales" class="redesSociales"></a></li>
+        </div>
+    </footer>
+
+    <!-- Contenedor para el inicio de sesión -->
+    <div id="loginContainer" class="modal">
+        <span id="closeLogin" class="close">&times;</span>
+        <form id="loginForm" action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+
+
+    <script src="/script/logic.js"></script>
+</body>
+</html>

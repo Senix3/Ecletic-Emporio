@@ -1,0 +1,320 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-cont {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-cont a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#loginBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginBtn:hover {
+    background-color: #45a049;
+}
+
+#shoppingCart {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#shopping-car {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
+.nav-cont a:hover {
+    color: #f8f8f8;
+}
+
+/* Estilos para los contenedores de login, menú y carrito */
+.modal, .options, .cart-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.close:hover {
+    color: red;
+}
+
+.options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options ul li {
+    margin-bottom: 10px;
+}
+
+.options ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.options ul li a:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* Estilos para los contenedores de productos */
+.sect-product {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+}
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilos para el formulario de checkout */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos para los campos de formulario */
+input[type="text"],
+input[type="password"],
+input[type="radio"],
+input[type="date"],
+input[type="number"] {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón de formulario */
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos para el contador del carrito */
+#cartItemCount {
+  
+     background-color: #ff4d4d;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    
+    
+    
+    
+}
+
+img {
+    max-width: 450px;
+    max-height: 200px;
+}
+
+.nav-cont-log {
+    display: flex;
+    align-items: center;
+
+}
+
+#shoppingCart {
+    display: flex;
+    align-items: center;
+}
+
+#shopping-car {
+    vertical-align: middle;
+    margin-left: 5px; /* Cambiado de margin-right a margin-left */
+}
+
+#cartItemCount {
+    margin-left: 5px; /* Añadido margen a la izquierda del contador */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+}
+
+.nav-cont {
+    margin-right: 20px;
+}
+
+.nav-cont-log {
+    margin-left: auto; /* Mueve el contenedor al extremo derecho */
+    display: flex;
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+}
+
+.redesSociales {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    
+    
+}
+
+.nav-cont a, #loginBtn, #shoppingCart {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-cont a:hover, #loginBtn:hover, #shoppingCart:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .sect-product {
+        padding: 15px;
+    }
+}
+
+
+/* Estilos para la pagina shopping.html */
+
